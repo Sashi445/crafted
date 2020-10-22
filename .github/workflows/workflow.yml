@@ -11,7 +11,7 @@ runs-on: ubuntu-latest
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.12.x' # you can use 1.12
+        flutter-version: '1.20.0' # you can use 1.12
         channel: 'beta' # Currently you have to use beta channel for Flutter web.
     - name: Upgrades flutter
       run: flutter upgrade
@@ -29,9 +29,9 @@ runs-on: ubuntu-latest
       run: |
         cd example/build/web
         git init
-        git config user.name  "CI"
-        git config user.email "flutter-ci@github.com"
-        git remote add secure-origin https://${{ secrets.CRAFTED_WEB }}@github.com/Sashi445/Crafted.git
+        git config user.name  "Sashi445"
+        git config user.email "sashidhar652@gmail.com"
+        git remote add secure-origin https://${{ secrets.CRAFTED_WEB }}@github.com/Sashi445/crafted.git
         git checkout -b gh-pages
         git add .
         git commit -m "Updated docs"
